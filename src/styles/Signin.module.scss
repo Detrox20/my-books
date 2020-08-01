@@ -1,0 +1,119 @@
+$font-color: #24292e;
+$focus-color: #66ccff;
+$outline-color: #e1e4e8;
+$gradient: linear-gradient(
+  135deg,
+  rgba(6, 109, 171, 1) 0%,
+  rgba(85, 169, 214, 1) 80%,
+  rgba(162, 210, 232, 1) 100%
+);
+
+.wrapper-container {
+  height: 100vh;
+  background: url('http://www.eroun.net/news/photo/201811/3566_15794_1740.jpg')
+    no-repeat 0 0/100% 100%;
+
+  .side {
+    height: 100vh;
+    flex: 1 1;
+  }
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 42.5vh;
+    min-height: 398.22px;
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 420px;
+      min-width: 420px;
+      height: 100%;
+      border: 1px solid $outline-color;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.65);
+      padding: 10px;
+
+      .title {
+        width: 100%;
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      .description {
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-align: center;
+      }
+
+      .gradient {
+        width: 200px;
+        height: 8px;
+        margin-top: 0;
+        background: #066dab;
+        background: $gradient;
+      }
+
+      p {
+        width: 100%;
+        text-align: center;
+
+        label {
+          display: block;
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 14px;
+          color: $font-color;
+          text-align: start;
+
+          span {
+            color: #803b32;
+          }
+        }
+
+        input {
+          width: 60%;
+          border: 0.5px solid $outline-color;
+          border-radius: 5px;
+          padding: 4px 6px;
+        }
+
+        input:focus {
+          outline: none;
+          border-color: $focus-color;
+          box-shadow: 0 0 10px $focus-color;
+        }
+
+        .button {
+          width: 60%;
+          margin: 0;
+          padding: 0;
+          border-width: 0;
+          background: #066dab;
+          background: $gradient;
+          font-weight: 400;
+          font-size: 20px;
+          padding: 5px 12px;
+          overflow: hidden;
+          border-width: 0;
+          border-radius: 4px;
+          color: $font-color;
+        }
+
+        .button:focus {
+          outline: none;
+          border-color: $focus-color;
+          box-shadow: 0 0 10px $focus-color;
+        }
+      }
+    }
+  }
+}
