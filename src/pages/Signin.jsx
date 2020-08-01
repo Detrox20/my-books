@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { message } from 'antd';
+import { Row, Col, message } from 'antd';
 import withAuth from '../hocs/withAuth';
+import styles from '../styles/Signin.module.scss';
 
 class Signin extends React.Component {
   state = {
@@ -12,18 +13,39 @@ class Signin extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>로그인</h1>
-        <p>
-          <input type="text" value={this.state.email} onChange={this.change} />
-        </p>
-        <p>
-          <input type="password" ref={this.passwordRef} />
-        </p>
-        <p>
-          <button onClick={this.click}>로그인</button>
-        </p>
-      </div>
+      <Row align="middle" className={styles['wrapper-container']}>
+        <Col span={9} className={styles.side}></Col>
+        <Col span={6} className={styles['login-container']}>
+          <form>
+            <h1 className={styles.title}>MY BOOKS | 내책</h1>
+            <p className={styles.description}>LET'S READ A BOOK AT HOME</p>
+            <p className={styles.gradient}></p>
+            <p>
+              <label htmlFor="email" className={styles.email}>
+                Email<span>*</span>
+              </label>
+              <input
+                type="text"
+                name="email"
+                value={this.state.email}
+                onChange={this.change}
+              />
+            </p>
+            <p>
+              <label htmlFor="password" className={styles.password}>
+                Password<span>*</span>
+              </label>
+              <input type="password" name="password" ref={this.passwordRef} />
+            </p>
+            <p>
+              <button onClick={this.click} className={styles.button}>
+                Sign in
+              </button>
+            </p>
+          </form>
+        </Col>
+        <Col span={9} className={styles.side}></Col>
+      </Row>
     );
   }
 
