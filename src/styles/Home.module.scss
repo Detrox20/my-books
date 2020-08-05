@@ -1,0 +1,91 @@
+$font-color: #24292e;
+
+body {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper-container {
+  height: 100vh;
+  background: url('http://www.eroun.net/news/photo/201811/3566_15794_1740.jpg')
+    no-repeat 0 0/100% 15%;
+
+  .header {
+    height: 15vh;
+
+    h1 {
+      margin: auto;
+      font-weight: bold;
+      font-size: 3.8rem;
+      color: #000;
+      text-shadow: 0 2px 3px #747474, 1px 3px 4px #222, 0 8px 3px #474747,
+        0 11px 4px #747474, 0 14px 4px #565656, 0 17px 4px #343434,
+        0 20px 4px #171717;
+    }
+  }
+
+  .books-container {
+    height: 85vh;
+    padding: 10px 0;
+    background-color: dodgerblue;
+
+    .side {
+      min-width: 1vw;
+    }
+
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    ul {
+      min-width: 951px;
+      height: 100%;
+      border: 1px solid #000000;
+      border-bottom: none;
+
+      li {
+        display: flex;
+        flex-wrap: nowrap;
+        border-bottom: 1px solid #000000;
+
+        .image {
+          width: 20%;
+          height: calc((85vh - 26px) / 5);
+          border-right: 1px solid #000000;
+          // background-color: firebrick;
+
+          a {
+            width: 100%;
+            height: 100%;
+
+            .book2881 {
+              width: 100%;
+              height: 100%;
+              background-color: firebrick;
+              // background: url('http://www.eroun.net/news/photo/201811/3566_15794_1740.jpg')
+              //   no-repeat 0 0/100% 100%;
+            }
+          }
+        }
+
+        .content {
+          width: 80%;
+          padding: 2px 6px;
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
